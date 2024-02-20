@@ -16,6 +16,11 @@ p{
     margin: 0;
 }
 
+
+
+
+
+
 #navbar{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -69,6 +74,9 @@ display: none;
     display: flex;
 }
 
+
+
+
 #bannerText {
 font-family: "Rubik Mono One", monospace;
 font-size: 28px;
@@ -86,8 +94,16 @@ width: 50%;
     margin-right:auto;    
 }
 
+
+
+
+
 .poemHU {
 font-family: "Alike", serif;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
 margin-right: auto;
 margin-left: auto;
 margin-bottom: 100px;
@@ -97,7 +113,6 @@ text-align: center;
 
 #stanzaHU1{
    padding: 10px;
-
 }
 
 #stanzaHU2{
@@ -109,6 +124,43 @@ text-align: center;
 }
 
 #stanzaHU4{
-    padding: 10px;
-    
+    padding: 10px;  
 }
+
+.poemENG {
+    font-family: "Alike", serif;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    text-align: center;
+    }
+    
+    #stanzaENG1{
+       padding: 10px;
+    }
+    
+    #stanzaENG2{
+        padding: 10px;
+    }
+    
+    #stanzaENG3{
+        padding: 10px;
+    }
+    
+    #stanzaENG4{
+        padding: 10px;  
+    }
+
+    .poem:hover .poemENG{
+        display: flex;
+
+    }
+
+    .poem:hover {
+        display: flex;
+    }
