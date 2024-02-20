@@ -1,0 +1,86 @@
+/* Rubik Mono One */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+/* Alike */
+@import url('https://fonts.googleapis.com/css2?family=Alike&display=swap');
+
+
+body {
+background-color: #E6E6E6;
+margin:0;
+}
+
+#navbar{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    list-style-type: none;
+    padding-top: 40px;
+    padding-left: 100px;
+    display: flex;    
+}
+
+#jozsefAttilaNav::before {
+text-transform: uppercase;
+font-weight: 500;
+font-size: 32px;
+display: inline; 
+content: "József Attila:"
+
+}
+    
+#jozsefAttilaNav:hover::before{
+content: "Attila József:";
+}
+
+#aboutBorderlineContainer{
+    position: relative;
+    padding-top: 10.2px;
+    padding-left: 3px;
+}
+
+#aboutNav {
+    display: inline;
+    font-weight: 400;
+    font-size: 22px;
+    text-transform: lowercase;
+    position: relative;
+}
+
+#borderlineNav {
+font-family: "Rubik Mono One";
+font-size: 100px;
+color: rgba(182, 182, 182, 0.377);
+border-radius: 50px;
+z-index: -100;
+display: flex;
+margin-top: -40px;
+margin-left: 20px;
+position: absolute;
+display: none;
+}
+
+#aboutBorderlineContainer:hover #borderlineNav {
+    display: flex;
+}
+
+#bannerText {
+font-family: "Rubik Mono One", monospace;
+font-size: 28px;
+margin-top: 150px;
+margin-right: auto;
+margin-left: auto;
+text-align: center;
+width: 50%;
+
+}
+
+#line{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;    
+}
+
+.poemHU {
+font-family: "Alike", serif;
+}
