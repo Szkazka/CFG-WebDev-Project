@@ -11,6 +11,11 @@ background-color: #E6E6E6;
 margin:0;
 }
 
+p{
+    padding: 0;
+    margin: 0;
+}
+
 #navbar{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -83,4 +88,27 @@ width: 50%;
 
 .poemHU {
 font-family: "Alike", serif;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 100px;
+margin-top: 20px;
+text-align: center;
+}
+
+#stanzaHU1{
+   padding: 10px;
+
+}
+
+#stanzaHU2{
+    padding: 10px;
+}
+
+#stanzaHU3{
+    padding: 10px;
+}
+
+#stanzaHU4{
+    padding: 10px;
+    
 }
