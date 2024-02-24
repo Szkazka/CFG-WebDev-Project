@@ -97,14 +97,15 @@ width: 50%;
 
 .shuffleArea {
     position: relative;
-    border: 2px solid black; /* Delete later! */
-    overflow: auto; 
+    /* border: 2px solid black; */
+    overflow: visible; 
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
-    margin-left:20%;
-    margin-right:20%;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    margin-left:30%;
+    margin-right:30%;
     height:500px;
     white-space: nowrap;
   

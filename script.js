@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
       shuffleArray(stanzasENG);
   
       // Define the boundaries of the area for randomization (example: 25% to 75% of window width and height)
-      const minX = shuffleArea.offsetLeft;
-      const minY = shuffleArea.offsetTop;
-      const maxX = minX + shuffleArea.offsetWidth;
-      const maxY = minY + shuffleArea.offsetHeight;
+      const minX = 0;
+      const minY = 0;
+      const maxX = shuffleArea.offsetWidth;
+      const maxY = shuffleArea.offsetHeight;
   
       const usedCoordinates = []; // Array to store used coordinates
   
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       } while (collision); // Repeat until no collision is detected
   
-      const randomRotation = Math.random() * 360; // Random rotation angle
+      const randomRotation = Math.random() * 60; // Random rotation angle
   
       stanza.style.position = "absolute";
       stanza.style.left = randomX + "px";
