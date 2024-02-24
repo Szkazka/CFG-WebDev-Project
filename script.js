@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to shuffle and randomize stanzas
     function shuffleAndRandomizeStanzas() {
       const poemContainer = document.querySelector('.poem');
+      const shuffleArea = document.querySelector('.shuffleArea');
+
+       // Create array from the stanzas
       const stanzasHU = Array.from(poemContainer.querySelectorAll('.poemHU > div'));
       const stanzasENG = Array.from(poemContainer.querySelectorAll('.poemENG > div'));
   
@@ -10,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
       shuffleArray(stanzasENG);
   
       // Define the boundaries of the area for randomization (example: 25% to 75% of window width and height)
-      const minX = window.innerWidth * 0.25;
-      const minY = window.innerHeight * 0.25;
-      const maxX = window.innerWidth * 0.75;
-      const maxY = window.innerHeight * 0.75;
+      const minX = shuffleArea.offsetLeft;
+      const minY = shuffleArea.offsetTop;
+      const maxX = minX + shuffleArea.offsetWidth;
+      const maxY = minY + shuffleArea.offsetHeight;
   
       const usedCoordinates = []; // Array to store used coordinates
   
