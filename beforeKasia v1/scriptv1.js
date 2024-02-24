@@ -20,10 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
       stanzasHU.forEach(function(stanza) {
         randomizeStanza(stanza, usedCoordinates, minX, minY, maxX, maxY);
         poemContainer.appendChild(stanza);
-        // Add click event listener to each stanza
-        stanza.addEventListener('click', function(){
-            stanzaClickHandler(stanza)
-        });
       });
   
       stanzasENG.forEach(function(stanza) {
@@ -80,35 +76,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Attach click event listener to the poem container
     const poemContainer = document.querySelector('.poem');
     poemContainer.addEventListener('click', shuffleAndRandomizeStanzas);
-
-    function undoShuffleAndRandomizeStanzas() {
-        // Remove event listeners from stanzas // Reset CSS styles for stanzas
-        const stanzas = document.querySelectorAll('.poem > div');
-        stanzas.forEach(stanza => {
-            stanza.removeEventListener('click', stanzaClickHandler);
-            stanza.removeAttribute('style');
-           if (stanza.className === 'bold') {
-            stanza.classList.toggle('bold');
-           }
-            console.log(stanza)
-        });
-    }
-
-    
-    // Function to handle stanza click event
-     function stanzaClickHandler(stanza) {
-        // You can define the behavior when a stanza is clicked here
-        stanza.classList.toggle('bold');
-        let totalStanzas = document.querySelectorAll('#stanzaHU1, #stanzaHU2, #stanzaHU3, #stanzaHU4').length;
-        let boldStanzas = document.querySelectorAll('.bold').length;
-        // Check if all stanzas are now bold
-        if (boldStanzas === totalStanzas) {
-            const video = document.getElementsByTagName('iframe')[0]
-            video.removeAttribute('hidden')
-            const banner = document.querySelector('h1')
-            banner.setAttribute('hidden', true)
-            poemContainer.setAttribute('hidden',true)
-            undoShuffleAndRandomizeStanzas()    
-        }
-    }    
   });
+  

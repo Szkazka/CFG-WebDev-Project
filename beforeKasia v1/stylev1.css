@@ -95,6 +95,9 @@ width: 50%;
 }
 
 
+
+
+
 .poemHU {
 font-family: "Alike", serif;
 display: flex;
@@ -107,10 +110,6 @@ margin-bottom: 100px;
 margin-top: 20px;
 text-align: center;
 }
-
-.bold {
-    font-weight: bold;
-    }
 
 #stanzaHU1{
    padding: 10px;
@@ -164,11 +163,6 @@ text-align: center;
 
     .poem:hover {
         display: flex;
+        margin-left:25%;
+        margin-right:25%;
     }
-
-.videoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-    
