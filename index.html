@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>CFG 8-week WebDev Project: Jozsef Attila</title>
 </head>
+
 <body>
+  <!-- Navigation bar -->
   <nav>
     <ul id="navbar">
       <li id="jozsefAttilaNav" href="index.html"></li>
@@ -17,68 +20,84 @@
     </ul>
   </nav>
 
-  <h1 id="bannerText">Hover on the stanzas and access the English translation. Drag and Drop the stanzas under each other and listen the poem. </h1>
+ <!-- Banner Text / the big bold text (change the content here for the article's title on the about page)  -->
+  <h1 class="bannerText" id="mainBanner">Hover on the stanzas and access the English translation. Click the stanzas and listen the poem. </h1>
+  <h1 class="bannerText" hidden id="shuffledBanner">Oops! Click on every hungarian stanzas </h1>
   
+  <!-- Video tha only appears later (delete completely on the about page) -->
+  <h2 class="videoContainer">
+    <div id="player" hidden></div>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5j2ZUmKhdKQ?si=eeSanbVRfxoFbOVy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe> -->
+  </h2>
+
+  <!-- Line below the banner text (stays as it is on the about page)-->
   <svg id="line" height="2" width=50% stroke="black" xmlns="http://www.w3.org/2000/svg">
     <line x1="0" y1="1" x2="100%" y2="1" stroke="black" />
   </svg>
 
-  <div class="poem">
-    <div class="poemHU">
-      <div id="stanzaHU1">
-        <p>Nincsen apám, se anyám,</p>
-        <p>se istenem, se hazám,</p>
-        <p>se bölcsőm, se szemfedőm,</p>
-        <p>se csókom, se szeretőm.</p>
+  <!-- Poems (This is where the article goes. Delete all the divs and create a new div within it place the text within a p tag) -->
+  <div class="shuffleArea">
+    <div class="poem">
+      <div class="poemHU">
+        <div id="stanzaHU1">
+          <p>Nincsen apám, se anyám,</p>
+          <p>se istenem, se hazám,</p>
+          <p>se bölcsőm, se szemfedőm,</p>
+          <p>se csókom, se szeretőm.</p>
+        </div>
+        <div id="stanzaHU2">
+          <p>Harmadnapja nem eszek,</p>
+          <p>se sokat, se keveset.</p>
+          <p>Húsz esztendőm hatalom,</p>
+          <p>húsz esztendőm eladom.</p>
+        </div>
+        <div id="stanzaHU3">
+          <p>Hogyha nem kell senkinek,</p>
+          <p>hát az ördög veszi meg.</p>
+          <p>Tiszta szívvel betörök,</p>
+          <p>ha kell, embert is ölök.</p>
+        </div>
+        <div id="stanzaHU4">
+          <p>Elfognak és felkötnek,</p>
+          <p>áldott földdel elfödnek</p>
+          <p>s halált hozó fű terem</p>
+          <p>gyönyörűszép szívemen.</p>
+        </div>
       </div>
-      <div id="stanzaHU2">
-        <p>Harmadnapja nem eszek,</p>
-        <p>se sokat, se keveset.</p>
-        <p>Húsz esztendőm hatalom,</p>
-        <p>húsz esztendőm eladom.</p>
-      </div>
-      <div id="stanzaHU3">
-        <p>Hogyha nem kell senkinek,</p>
-        <p>hát az ördög veszi meg.</p>
-        <p>Tiszta szívvel betörök,</p>
-        <p>ha kell, embert is ölök.</p>
-      </div>
-      <div id="stanzaHU4">
-        <p>Elfognak és felkötnek,</p>
-        <p>áldott földdel elfödnek</p>
-        <p>s halált hozó fű terem</p>
-        <p>gyönyörűszép szívemen.</p>
-      </div>
-    </div>
 
-    <div class="poemENG">
-      <div id="stanzaENG1">
-        <p>I have neither native sod,</p>
-        <p>nor a father, mother, god,</p>
-        <p>cradle gone, the shroud I miss,</p>
-        <p>lack a lover, lack a kiss.</p>
-      </div>
-      <div id="stanzaENG2">
-        <p>Three days' hunger, not a bite:</p>
-        <p>nothing heavy, nothing light.</p>
-        <p>Just on twenty, strong and well,</p>
-        <p>twenty years I'll try to sell.</p>
-      </div>
-      <div id="stanzaENG3">
-        <p>If a buyer can't be got,</p>
-        <p>let the devil take the lot.</p>
-        <p>Pure at heart, I surely will</p>
-        <p>break and enter, even kill</p>
-      </div>
-      <div id="stanzaENG4">
-        <p>They will catch me, I'll be hung,</p>
-        <p>blessed earth on me be flung,</p>
-        <p>deadly grasses will then start</p>
-        <p>growing on my splendid heart.</p>
-      </div> 
-    </div>  
+      <div class="poemENG">
+        <h1 class="bannerTextEnglish" hidden id="englishBanner">With a pure heart</h1>
+        <div id="stanzaENG1">
+          <p>I have neither native sod,</p>
+          <p>nor a father, mother, god,</p>
+          <p>cradle gone, the shroud I miss,</p>
+          <p>lack a lover, lack a kiss.</p>
+        </div>
+        <div id="stanzaENG2">
+          <p>Three days' hunger, not a bite:</p>
+          <p>nothing heavy, nothing light.</p>
+          <p>Just on twenty, strong and well,</p>
+          <p>twenty years I'll try to sell.</p>
+        </div>
+        <div id="stanzaENG3">
+          <p>If a buyer can't be got,</p>
+          <p>let the devil take the lot.</p>
+          <p>Pure at heart, I surely will</p>
+          <p>break and enter, even kill</p>
+        </div>
+        <div id="stanzaENG4">
+          <p>They will catch me, I'll be hung,</p>
+          <p>blessed earth on me be flung,</p>
+          <p>deadly grasses will then start</p>
+          <p>growing on my splendid heart.</p>
+        </div> 
+      </div>  
+    </div>
   </div>
 
-    
+  
+  <script src="script.js"></script>  
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="scriptyt.js"></script>
 </body>
 </html>

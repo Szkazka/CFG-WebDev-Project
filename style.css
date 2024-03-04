@@ -77,15 +77,26 @@ display: none;
 
 
 
-#bannerText {
+
+.bannerText {
 font-family: "Rubik Mono One", monospace;
 font-size: 28px;
-margin-top: 150px;
+margin-top: 80px;
 margin-right: auto;
 margin-left: auto;
 text-align: center;
 width: 50%;
+}
 
+.bannerTextEnglish {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 28px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 50%;
+    margin-top: auto;
+    padding-top: 30px;
 }
 
 #line{
@@ -94,66 +105,61 @@ width: 50%;
     margin-right:auto;    
 }
 
-
-
-
+.shuffleArea {
+    position: relative;
+    /* border: 2px solid black; */
+    overflow: visible; 
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:10%;
+    margin-right:10%;
+    height:500px;
+    white-space: nowrap;  
+  }
 
 .poemHU {
 font-family: "Alike", serif;
 display: flex;
-justify-content: space-around;
+/* justify-content: space-around; */
 align-items: center;
 flex-direction: column;
-margin-right: auto;
-margin-left: auto;
-margin-bottom: 100px;
+margin-right: 70px;
+/* margin-left: auto;
+margin-bottom: 100px; */
 margin-top: 20px;
 text-align: center;
 }
 
-#stanzaHU1{
+.bold {
+    font-family: "Rubik Mono One", monospace; ;
+    font-size: 12px;
+    }
+
+#stanzaHU1, #stanzaHU2, #stanzaHU3, #stanzaHU4 {
    padding: 10px;
-}
+   font-size: 12px;
 
-#stanzaHU2{
-    padding: 10px;
-}
-
-#stanzaHU3{
-    padding: 10px;
-}
-
-#stanzaHU4{
-    padding: 10px;  
 }
 
 .poemENG {
     font-family: "Alike", serif;
     display: none;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     flex-direction: column;
     margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 100px;
+    /* margin-left: 70px;
+    margin-bottom: 100px; */
     margin-top: 20px;
     text-align: center;
     }
     
-    #stanzaENG1{
+    #stanzaENG1, #stanzaENG2, #stanzaENG3, #stanzaENG4{
        padding: 10px;
-    }
-    
-    #stanzaENG2{
-        padding: 10px;
-    }
-    
-    #stanzaENG3{
-        padding: 10px;
-    }
-    
-    #stanzaENG4{
-        padding: 10px;  
+       font-size: 12px;
     }
 
     .poem:hover .poemENG{
@@ -164,3 +170,12 @@ text-align: center;
     .poem:hover {
         display: flex;
     }
+
+.videoContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    
