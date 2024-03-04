@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Function to shuffle and randomize stanzas
     function shuffleAndRandomizeStanzas() {
+
       //change heading
       document.querySelector('#mainBanner').setAttribute('hidden',true)
       document.querySelector('#shuffledBanner').removeAttribute('hidden')
+
 
 
       const poemContainer = document.querySelector('.poem');
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Define the boundaries of the area for randomization (example: 25% to 75% of window width and height)
       const minX = 0;
+
       const minY = 40;
       const maxX = shuffleArea.offsetWidth;
       const maxY = shuffleArea.offsetHeight;
@@ -26,7 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
       const usedCoordinates = []; // Array to store used coordinates
   
       stanzasHU.forEach(function(stanza) {
+
         randomizeStanza(stanza, usedCoordinates, minX, minY, maxX, maxY, 30);
+
         poemContainer.appendChild(stanza);
         // Add click event listener to each stanza
         stanza.addEventListener('click', function(){
@@ -35,7 +40,9 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   
       stanzasENG.forEach(function(stanza) {
+
         randomizeStanza(stanza, usedCoordinates, minX, minY, maxX, maxY, 30);
+
         poemContainer.appendChild(stanza);
       });
     }
@@ -49,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     // Function to randomize stanza position and rotation within a specific area
+
     function randomizeStanza(stanza, usedCoordinates, minX, minY, maxX, maxY, margin) {
       const stanzaWidth = stanza.offsetWidth + margin * 2;
       const stanzaHeight = stanza.offsetHeight + margin * 2;
@@ -60,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         randomX = Math.random() * (maxX - minX - stanzaWidth) + minX;
         randomY = Math.random() * (maxY - minY - stanzaHeight) + minY;
                
+
   
         // Check if the current coordinates collide with any used coordinates
         var collision = usedCoordinates.some(coord => {
@@ -93,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     poemContainer.addEventListener('click', shuffleAndRandomizeStanzas);
 
     function undoShuffleAndRandomizeStanzas() {
+
               // Remove event listeners from stanzas // Reset CSS styles for stanzas
         const stanzas = document.querySelectorAll('#stanzaENG1, #stanzaENG2, #stanzaENG3, #stanzaENG4');
         
@@ -121,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
       parent.appendChild(stanzaEng2);
       parent.appendChild(stanzaEng3);
       parent.appendChild(stanzaEng4);
+
     }
 
     
@@ -128,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
      function stanzaClickHandler(stanza) {
         // You can define the behavior when a stanza is clicked here
         stanza.classList.toggle('bold');
+
         let totalStanzas = document.querySelectorAll('#stanzaHU1, #stanzaHU2, #stanzaHU3, #stanzaHU4');
         let boldStanzas = document.querySelectorAll('.bold').length;
         // Check if all stanzas are now bold
@@ -145,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const englishBanner = document.querySelector('#englishBanner');
             parent.insertBefore(englishBanner,parent.firstChild)
             englishBanner.removeAttribute('hidden') 
+
         }
     }    
   });
