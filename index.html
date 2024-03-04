@@ -21,11 +21,15 @@
   </nav>
 
  <!-- Banner Text / the big bold text (change the content here for the article's title on the about page)  -->
-  <h1 id="bannerText">Hover on the stanzas and access the English translation. Drag and Drop the stanzas under each other and listen the poem. </h1>
+
+  <h1 class="bannerText" id="mainBanner">Hover on the stanzas and access the English translation. Click the stanzas and listen the poem. </h1>
+  <h1 class="bannerText" hidden id="shuffledBanner">Oops! Click on every hungarian stanzas </h1>
   
   <!-- Video tha only appears later (delete completely on the about page) -->
   <h2 class="videoContainer">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5j2ZUmKhdKQ?si=eeSanbVRfxoFbOVy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe>
+    <div id="player" hidden></div>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5j2ZUmKhdKQ?si=eeSanbVRfxoFbOVy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe> -->
+
   </h2>
 
   <!-- Line below the banner text (stays as it is on the about page)-->
@@ -64,6 +68,8 @@
       </div>
 
       <div class="poemENG">
+
+        <h1 class="bannerTextEnglish" hidden id="englishBanner">With a pure heart</h1>
         <div id="stanzaENG1">
           <p>I have neither native sod,</p>
           <p>nor a father, mother, god,</p>
@@ -94,5 +100,9 @@
 
   
   <script src="script.js"></script>  
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="scriptyt.js"></script>
+
 </body>
 </html>
