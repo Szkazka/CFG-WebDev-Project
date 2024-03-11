@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
         poemEngClass.forEach(poemEngClass => {
           poemEngClass.style.marginLeft = '';
           poemEngClass.style.marginBottom = '';
+          poemEngClass.style.marginTop = '0';
         })
       const parent = document.querySelector('.shuffleArea');
       parent.style.display = 'block'
