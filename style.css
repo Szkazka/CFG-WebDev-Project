@@ -188,5 +188,47 @@ text-align: center;
 }
 
 
+.articleText {
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 70px;
+    text-align:justify;
+    width: 50%;
+}
 
+.articleText p {
+    margin: 22px;
+    font-size: 20px;
+}
+
+#intro{
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* Borlerline highlight */
+mark {
+    --color1: springgreen;
+    --color2: springgreen;
+    --bg-height: 40%;
+      
+    all: unset;
+    background-image: linear-gradient(var(--color1), var(--color2));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 var(--bg-height);
+    animation: highlight 800ms 1 ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+  }
+  
+  
+  @keyframes highlight {
+    to {
+      background-size: 100% var(--bg-height);
+    }
+  }
+  
     
